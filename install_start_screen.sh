@@ -1,5 +1,3 @@
-#!/bin/bash
-
 # Function to check if a command exists
 command_exists() {
     command -v "$1" >/dev/null 2>&1
@@ -8,7 +6,7 @@ command_exists() {
 # Check if htop is installed, install it if not
 if ! command_exists htop; then
     echo "htop is not installed. Installing htop..."
-    sudo apt update
+    sudo apt update -y
     sudo apt install htop -y
 fi
 
